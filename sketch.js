@@ -587,12 +587,10 @@ function draw() {
     }
     if (keyIsDown(SHIFT)) {
       targetedTile.replaceContent(new Vaccum(), false);
+    } else if ( keyIsDown(CONTROL) ) {
+      targetedTile.replaceContent(new Water());
     } else {
-      if (mouseButton === LEFT) {
-        targetedTile.replaceContent(new Rock());
-      } else {
-        targetedTile.replaceContent(new Water());
-      }
+      targetedTile.replaceContent(new Rock());
     }
   }
 
